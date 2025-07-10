@@ -1,0 +1,60 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark {
+            color-scheme: dark;
+        }
+        .profile-img {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            cursor: pointer;
+            width: 1.5rem;
+            font-size: 1.5rem;
+        }
+        .star-rating label:before {
+            content: '★';
+            color: #ddd;
+        }
+        .star-rating input:checked ~ label:before {
+            color: #ffd700;
+        }
+        .review-avatar {
+            transition: transform 0.3s ease;
+        }
+        .review-avatar:hover {
+            transform: scale(1.1);
+        }
+        .portfolio-slideshow {
+            position: relative;
+        }
+        .portfolio-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .portfolio-slide.active {
+            opacity: 1;
+        }
+   
